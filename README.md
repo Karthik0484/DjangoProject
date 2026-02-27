@@ -1,6 +1,6 @@
 # Django Project Setup
 
-## 📌 Project Overview
+##  Project Overview
 This is a basic Django project created for practice and understanding project structure.
 The project contains two sample apps:
 - Students App
@@ -8,14 +8,14 @@ The project contains two sample apps:
 
 ---
 
-## 🚀 Tech Stack
+##  Tech Stack
 - Python
 - Django
 - SQLite (Default Database)
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 django_project_setup/
 │
