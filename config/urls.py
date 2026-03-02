@@ -17,9 +17,30 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from django.contrib import admin
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from reviews.views import (
+    CategoryViewSet,
+    ProductViewSet,
+    UserViewSet,
+    ReviewViewSet,
+    SentimentResultViewSet
+)
+
+
+router = DefaultRouter()
+router.register(r'categories', CategoryViewSet)
+router.register(r'products', ProductViewSet)
+router.register(r'users', UserViewSet)
+router.register(r'reviews', ReviewViewSet)
+router.register(r'sentiments', SentimentResultViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('students/', include('students.urls')),
     path('courses/', include('courses.urls')),
+    path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
 ]
