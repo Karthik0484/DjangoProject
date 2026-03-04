@@ -32,14 +32,12 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
-
 router = DefaultRouter()
 router.register(r'categories', CategoryViewSet)
 router.register(r'products', ProductViewSet)
 router.register(r'users', UserViewSet)
 router.register(r'reviews', ReviewViewSet)
 router.register(r'sentiments', SentimentResultViewSet)
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
